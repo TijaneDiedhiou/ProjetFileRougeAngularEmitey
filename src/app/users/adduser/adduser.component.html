@@ -1,0 +1,31 @@
+    <div class="formulaire col-md-5">
+
+      <form method="post" action="" enctype="multipart/form-data">
+        <label class="textelabel" for="pseudo">Nom </label><br>
+        <input placeholder="Nom" class="input" type="text" id="pseudo" name="pseudo" required><br>
+
+        <label class="textelabel" for="mdp">Prenom</label><br>
+        <input placeholder="Prenom" class="input" type="text" id="mdp" name="mdp"><br>
+
+        <label class="textelabel" for="email">Email</label><br>
+        <input  placeholder="email" class="input" type="email" id="email" name="email"><br>
+
+        <label class="textelabel" >Profil</label><br>
+        <select   class="mb-4 " id="Pays" name="pays">
+          <optgroup label="Profil">
+            <option value="fo">Formateur</option>
+            <option value="cm">Cm</option>
+            <option value="ap" selected>Apprenant</option>
+            <option value="ad" >Admin</option>
+          </optgroup>
+        </select><br>
+        <label style="font-weight: bold" class=" " for="avatar">Avatar</label><br>
+        <input   type="file" id="avatar" name="avatar" multiple><br>
+
+
+<button   type="button" class="btn btn-outline-primary mt-4 mb-4 ml-5 ">Primary</button>
+
+      </form>
+
+
+    </div>

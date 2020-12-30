@@ -1,0 +1,67 @@
+<div class="container cadrage ">
+
+  <form class="mt-4 w-50" method="post" action="" enctype="multipart/form-data">
+    <label  class="textelabel" for="pseudo"> <b class="mr-2">Libellé</b> </label><br>
+    <input placeholder="Nom" class="input" type="text" id="pseudo" name="pseudo" required>
+    <div class="form-group">
+      <label for="exampleTextarea"><b>Présentation</b></label><textarea class="form-control " id="exampleTextarea" rows="3"></textarea><br>
+    </div>
+
+    <label  class="textelabelCompetence" for="pseudo"> <b class="mr-2">Competences</b> </label><br>
+    <div class="card" style="width: 30rem;">
+      <div class="card-body">
+        <!--chips1-->
+        <div class="chip ">
+          Developper le back-end
+          <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+        </div>
+        <!--chips2-->
+        <div class="chip t-4">
+          Développer le front-end d'une application web
+          <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+        </div>
+        <!--chipsfin-->
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label class="mt-2" for="exampleInputFile"><b>Uploader le programme</b></label>
+      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    </div>
+
+    <label  class="textelabelCompetence" for="pseudo"> <b class="mr-2">Critére d'évaluation</b> </label><br>
+    <div class="card" style="width: 30rem;">
+      <div class="card-body">
+        <!--chips1-->
+        <div class="chip ">
+Un portfolio comprenant la realisation
+        </div>
+        <!--chips2-->
+        <div class="chip t-4">
+         Une soutenance devant bun jury
+
+        </div>
+        <!--chipsfin-->
+      </div>
+    </div>
+    <label  class="textelabelCompetence" for="pseudo"> <b class="mr-2">Critéres d'admission</b> </label><br>
+    <div class="card" style="width: 30rem;">
+      <div class="card-body">
+        <!--chips1-->
+        <div class="chip ">
+          Créer une base de donnée
+          <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+        </div>
+        <!--chips2-->
+        <div class="chip t-4">
+          Dévelloper des composants d'accés aux données
+          <span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+        </div>
+        <!--chipsfin-->
+      </div>
+    </div>
+    <button  type="button" class="btn btn-outline-primary mt-4 mb-4 ">Soumettre</button>
+  </form>
+
+</div>
+

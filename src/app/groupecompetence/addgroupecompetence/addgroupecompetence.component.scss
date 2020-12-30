@@ -1,0 +1,51 @@
+.cadrage{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0px 2px  0px 1px #e7e4e4;
+  border: solid 1px #00A0DC;
+}
+.input{
+  width: 350px;
+  height: 40px;
+}
+.textelabel {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+label {
+  vertical-align: top;
+}
+.btn{
+  margin-left: 83%;
+}
+textelabelCompetence{
+  margin-top: -15%;
+}
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 35px;
+  font-size: 12px;
+  line-height: 35px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  border:solid 1px #00A0DC;
+  margin-top: 4px;
+}
+
+
+.closebtn {
+  padding-left: 10px;
+  color: #06c6d9;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: #000;
+}
