@@ -1,16 +1,25 @@
 <app-admin></app-admin>
 <div  class="container mt-3">
-  <div class="row">
-    <div class="col-md-6 col-sm-6 cadrage text-center">
+    <div class="cadrage text-center">
+
       <h4 class="mt-4"> <b>Liste des Utilisateurs</b></h4>
+      <div id="accordion">
+        <div class="">
+            <h5 class="mb-0">
+             <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    <i style="font-size: 20px" class="fas fa-user-plus float-right m-auto mt-5"  ></i></a>
+            </h5>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <app-adduser></app-adduser>
+            </div>
+          </div>
+        </div>
+      </div>
       <form class="form-inline my-2 my-lg-0 search ">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       </form>
       <app-listeuser></app-listeuser>
+
     </div>
-    <div class="col-md-5 ml-2 col-sm-6  cadrage">
-      <h4 class="mt-4 text-center"> <b>Ajouter Utilisateurs</b></h4>
-      <app-adduser></app-adduser>
     </div>
-  </div>
-</div>

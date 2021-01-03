@@ -4,12 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { AdminComponent } from './home/admin/admin.component';
-import { ApprenantComponent } from './home/apprenant/apprenant.component';
-import { FormateurComponent } from './home/formateur/formateur.component';
-import { CmComponent } from './home/cm/cm.component';
-import { NavBarComponent } from './home/nav-bar/nav-bar.component';
+import { AdminComponent } from './admin/admin.component';
+import { ApprenantComponent } from './apprenant/apprenant.component';
+import { FormateurComponent } from './formateur/formateur.component';
+import { CmComponent } from './cm/cm.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProfilComponent } from './profil/profil.component';
 import { DetailProfilComponent } from './profil/detail-profil/detail-profil.component';
 import { ListeProfilComponent } from './profil/liste-profil/liste-profil.component';
@@ -25,7 +24,6 @@ import { ItemcompetenceComponent } from './competence/listecompetence/itemcompet
 import { GroupecompetenceComponent } from './groupecompetence/groupecompetence.component';
 import { ListegroupecompetenceComponent } from './groupecompetence/listegroupecompetence/listegroupecompetence.component';
 import { DetailgroupecompetenceComponent } from './groupecompetence/detailgroupecompetence/detailgroupecompetence.component';
-import { ItemgroupecompetenceComponent } from './groupecompetence/listegroupecompetence/itemgroupecompetence/itemgroupecompetence.component';
 import { ReferentielsComponent } from './referentiels/referentiels.component';
 import { DetailreferentielsComponent } from './referentiels/detailreferentiels/detailreferentiels.component';
 import { ListereferentielComponent } from './referentiels/listereferentiel/listereferentiel.component';
@@ -44,13 +42,15 @@ import { DetailpromosComponent } from './promos/detailpromos/detailpromos.compon
 import { ListepromosComponent } from './promos/listepromos/listepromos.component';
 import { ItempromosComponent } from './promos/listepromos/itempromos/itempromos.component';
 import { AddpromosComponent } from './promos/addpromos/addpromos.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ItemgroupecompetenceComponent} from './groupecompetence/listegroupecompetence/itemgroupecompetence/itemgroupecompetence.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {ErrorInterceptorProvider} from './helpers/error.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
     AdminComponent,
     ApprenantComponent,
     FormateurComponent,
@@ -90,13 +90,17 @@ import {FormsModule} from '@angular/forms';
     ListepromosComponent,
     ItempromosComponent,
     AddpromosComponent,
+
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule,
+        ReactiveFormsModule
+        ,
     ],
-  providers: [],
+  providers: [ErrorInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

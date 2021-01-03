@@ -1,0 +1,75 @@
+<div class="container-fluid d-none d-sm-block" style="background-color:#000000;color:#fff;height:100px;">
+  <marquee width="100%" scrollamount="4" scrolldelay="10">
+    <!-- L'objet parcourt 2px chaque 10ms -->
+    Bienvenue dans l’antre de notre nouvel espace collaboratif
+    <img style="width: 250px; height: 100px" src="assets/images/ordi.webp"> <h4>eMiTey</h4>
+
+  </marquee> </div>
+<nav style="box-shadow: 0px 0px 10px 0px; background-color: white" class="navbar navbar-expand-lg   sticky-top" data-spy="affix" data-offset-top="197">
+  <a   class="navbar-brand eMiTey" href="#">eMiTey</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+
+      <i  class="fas fa-home icone "></i>
+      <li class="nav-item active d-block">
+        <a class="nav-link menutext" data-toggle="tooltip" data-placement="bottom" title="Home"  href="">Home
+
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <i class="fas fa-envelope icone ml-2"></i>
+      <li class="nav-item">
+        <a class="nav-link menutext" data-toggle="tooltip" data-placement="bottom" title="Message" href=""><b>Message</b></a>
+      </li>
+      <i class="fas fa-inbox icone ml-2"></i>
+      <li class="nav-item">
+        <a class="nav-link menutext"  data-toggle="tooltip" data-placement="bottom" title="Rendus" href="">Rendus</a>
+
+      </li>
+      <i class="fas fa-compass icone ml-2"></i>
+      <li class="nav-item">
+        <a class="nav-link menutext" data-toggle="tooltip" data-placement="bottom" title="Explorer" href="">Explorer</a>
+      </li>
+      <i class="fas fa-users icone ml-2"></i>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle menutext" data-toggle="tooltip" data-placement="bottom" title="Utilisateur" data-toggle="dropdown" [routerLink]="['/admin/users']" role="button" aria-haspopup="true" aria-expanded="false">Utilisateur</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" [routerLink]="['/admin/users']">Utilisateur</a>
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" [routerLink]="['/admin/profil']" routerLinkActive="active">Profil</a>
+        </div>
+      </li>
+      <i class="fas fa-cogs icone ml-2"></i>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle menutext" data-toggle="dropdown"  href="admin/addpromos" role="button" aria-haspopup="true" aria-expanded="false">Parametre</a>
+        <div class="dropdown-menu">
+          <a style="text-decoration: none" class="" href="admin/addpromos">Promos</a>
+          <div class="dropdown-divider"></div>
+          <a style="text-decoration: none" class="" href="admin/competence">Competence</a>
+          <div class="dropdown-divider"></div>
+          <a style="text-decoration: none" class="mr-5" href="admin/groupecompetence">Groupe competence</a>
+          <div class="dropdown-divider"></div>
+          <a style="text-decoration: none" class="" href="admin/referentiels">Referentiel</a>
+
+        </div>
+      </li>
+    </ul>
+    <div class="btn-group">
+      <i class="fas fa-bell icone mr-2 "></i>
+      <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Tijana
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item" type="button">Action</button>
+        <button class="dropdown-item" type="button">Another action</button>
+        <button class="dropdown-item" type="button">Deconnexion</button>
+      </div>
+    </div>
+  </div>
+</nav>

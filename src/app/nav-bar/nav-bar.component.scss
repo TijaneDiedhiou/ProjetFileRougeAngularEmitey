@@ -1,0 +1,27 @@
+.icone{
+  font-size: 20px;
+  margin-top: 7px;
+}
+.menutext{
+  color: black;
+  font-weight: bolder;
+}
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+.affix + .container-fluid {
+  padding-top: 70px;
+}
+
+a:hover {
+  color: #06b4f6;
+}
+.eMiTey{
+  font-family: 'Oswald', sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  color: #454545;
+}

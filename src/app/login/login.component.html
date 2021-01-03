@@ -26,15 +26,16 @@
                 <span><a href="" target = "_blank"><i style="color: #B7081B" class="fab fa-pinterest-square"></i></a></span>
               </p>
             </div>
-            <form #loginFormulaire="ngForm">
+            <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
               <div class="form-group">
                 <label  class="" for="email"><b>Email</b></label>
                 <input email
-                       ngModel name="email"
+                       [(ngModel)]="user.email"
+                       ngModel name="mail"
                        required
                        #inputMail= "ngModel"
                        type="text"
-                       class="form-control "
+                       class="form-control  "
                        id="email">
               </div>
               <div class="alert alert-danger " *ngIf="inputMail.invalid && inputMail.touched && inputMail.dirty">
@@ -43,6 +44,7 @@
               <div class="form-group">
                 <label class="" for="pwd"><b>Password</b></label>
                 <input required
+                       [(ngModel)]="user.password"
                        type="password"
                        minlength="4"
                        ngModel name="password"
@@ -53,8 +55,8 @@
               <div class="alert alert-danger " *ngIf="pwdInput.invalid && pwdInput.touched">
                 Le password doit avoir au minimum 4 caracteres
               </div>
-              <button style="height: 40px" type="button" class="btn btn-outline-primary mt-3 w-25" (click)="login(loginFormulaire)">
-                 Connexion</button>
+              <button style="height: 40px" type="submit" class="btn btn-outline-primary mt-3 w-25">
+                dddddddddddddd</button>
             </form>
           </div>
         </div>

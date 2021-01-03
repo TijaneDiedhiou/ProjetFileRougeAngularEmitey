@@ -1,31 +1,47 @@
-    <div class="formulaire col-md-5">
+<div class="formulaire col-12">
 
-      <form method="post" action="" enctype="multipart/form-data">
-        <label class="textelabel" for="pseudo">Nom </label><br>
-        <input placeholder="Nom" class="input" type="text" id="pseudo" name="pseudo" required><br>
+  <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
 
-        <label class="textelabel" for="mdp">Prenom</label><br>
-        <input placeholder="Prenom" class="input" type="text" id="mdp" name="mdp"><br>
-
-        <label class="textelabel" for="email">Email</label><br>
-        <input  placeholder="email" class="input" type="email" id="email" name="email"><br>
-
-        <label class="textelabel" >Profil</label><br>
-        <select   class="mb-4 " id="Pays" name="pays">
-          <optgroup label="Profil">
-            <option value="fo">Formateur</option>
-            <option value="cm">Cm</option>
-            <option value="ap" selected>Apprenant</option>
-            <option value="ad" >Admin</option>
-          </optgroup>
-        </select><br>
-        <label style="font-weight: bold" class=" " for="avatar">Avatar</label><br>
-        <input   type="file" id="avatar" name="avatar" multiple><br>
-
-
-<button   type="button" class="btn btn-outline-primary mt-4 mb-4 ml-5 ">Primary</button>
-
-      </form>
-
-
+    <small for="prenom">Prénom</small><small id="error_1" class="input_alert float_r"></small>
+    <div class="div_input_1">
+      <input required class="form-control" id="prenom"  formControlName="prenom" type="text" />
     </div>
+
+    <small for="nom">Nom</small><small id="error_2" class="input_alert float_r"> </small>
+    <div class="div_input_1 ">
+      <input  required class="form-control" id="nom" type="text" formControlName="nom"  />
+    </div>
+
+    <small for="email">Email</small><small id="error_6" class="input_alert float_r"> </small>
+    <div class="div_input_1 ">
+      <input  required class="form-control"   type="email" formControlName="email"/>
+    </div>
+
+
+    <small for="password">Password</small><small id="password" class="input_alert float_r"> </small>
+    <div class="div_input_1 ">
+      <input  required class="form-control" type="password"  formControlName="password" />
+    </div>
+
+
+    <div class="form-group">
+      <small for="profil">Profil</small><small id="error_4" class="input"> </small>
+      <select class="form-control" id="profil"   formControlName="profil">
+        <option value="Admin">Admin</option>
+        <option value="Apprenant">Apprenant</option>
+        <option value="Cm">Community manager</option>
+        <option value="Formateur">Formateur</option>
+      </select>
+    </div>
+
+    <div class="div_input_1 ">
+      <label for="imgUser">choisir une image<input type="file"  formControlName="avatar"
+                          id="imgUser" (change)="onFileSelect($event)" accept="image/*"/>
+    </label>
+    </div>
+
+    <button type="submit" class="btn btn-outline-secondary">Secondary</button>
+  </form>
+</div>
+
+

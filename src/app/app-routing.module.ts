@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './login/login.component';
-import {AdminComponent} from './home/admin/admin.component';
+import {AdminComponent} from './admin/admin.component';
 import {UsersComponent} from './users/users.component';
 import {AdduserComponent} from './users/adduser/adduser.component';
 import {ProfilComponent} from './profil/profil.component';
@@ -15,11 +15,12 @@ import {PromosComponent} from './promos/promos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: 'admin/profil', component: ProfilComponent},
   {path: 'login', component: LoginComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'admin/users', component: UsersComponent},
   {path: 'admin/users/adduser', component: AdduserComponent},
-  {path: 'admin/profil', component: ProfilComponent},
+
   {path: 'admin/profil/addprofil', component: AddprofilComponent},
   {path: 'admin/profilsortie', component: ProfilsortieComponent},
   {path: 'admin/groupecompetence', component: GroupecompetenceComponent },
