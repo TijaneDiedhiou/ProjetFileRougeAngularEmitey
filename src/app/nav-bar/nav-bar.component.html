@@ -1,10 +1,5 @@
-<div class="container-fluid d-none d-sm-block" style="background-color:#000000;color:#fff;height:100px;">
-  <marquee width="100%" scrollamount="4" scrolldelay="10">
-    <!-- L'objet parcourt 2px chaque 10ms -->
-    Bienvenue dans l’antre de notre nouvel espace collaboratif
-    <img style="width: 250px; height: 100px" src="assets/images/ordi.webp"> <h4>eMiTey</h4>
 
-  </marquee> </div>
+
 <nav style="box-shadow: 0px 0px 10px 0px; background-color: white" class="navbar navbar-expand-lg   sticky-top" data-spy="affix" data-offset-top="197">
   <a   class="navbar-brand eMiTey" href="#">eMiTey</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,10 +30,10 @@
         <a class="nav-link menutext" data-toggle="tooltip" data-placement="bottom" title="Explorer" href="">Explorer</a>
       </li>
       <i class="fas fa-users icone ml-2"></i>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle menutext" data-toggle="tooltip" data-placement="bottom" title="Utilisateur" data-toggle="dropdown" [routerLink]="['/admin/users']" role="button" aria-haspopup="true" aria-expanded="false">Utilisateur</a>
+      <li  class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle menutext" data-placement="bottom" title="Utilisateur" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Utilisateur</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" [routerLink]="['/admin/users']">Utilisateur</a>
+          <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/admin/users']">Utilisateur</a>
           <div class="dropdown-divider"></div>
 
           <a class="dropdown-item" [routerLink]="['/admin/profil']" routerLinkActive="active">Profil</a>
@@ -47,7 +42,7 @@
       <i class="fas fa-cogs icone ml-2"></i>
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle menutext" data-toggle="dropdown"  href="admin/addpromos" role="button" aria-haspopup="true" aria-expanded="false">Parametre</a>
+        <a class="nav-link dropdown-toggle menutext" data-toggle="dropdown"  href="#" role="button" aria-haspopup="true" aria-expanded="false">Parametre</a>
         <div class="dropdown-menu">
           <a style="text-decoration: none" class="" href="admin/addpromos">Promos</a>
           <div class="dropdown-divider"></div>

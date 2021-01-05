@@ -14,11 +14,11 @@ export class ItemuserComponent implements OnInit {
     this.getUsers();
   }
   getUsers(): any{
-     this.userService.getUsers()
+    this.userService.getUsers()
       .subscribe(
         response => {
           this.users = response;
         }
       );
-}
+  }
 }
