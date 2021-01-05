@@ -15,21 +15,22 @@ import {PromosComponent} from './promos/promos.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
-  {path: 'admin/profil', component: ProfilComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'admin', component: AdminComponent},
-  {path: 'admin/users', component: UsersComponent},
-  {path: 'admin/users/adduser', component: AdduserComponent},
+  {path: 'admin', component: AdminComponent,  children: [
+      {path: '', redirectTo: '/admin/users', pathMatch: 'full'},
+      {path: 'profil', component: ProfilComponent},
+      {path: 'users', component: UsersComponent },
+      {path: 'users/adduser', component: AdduserComponent},
 
-  {path: 'admin/profil/addprofil', component: AddprofilComponent},
-  {path: 'admin/profilsortie', component: ProfilsortieComponent},
-  {path: 'admin/groupecompetence', component: GroupecompetenceComponent },
-  {path: 'admin/groupecompetence/addgroupecompetence', component: AddgroupecompetenceComponent },
-  {path: 'admin/referentiels', component: ReferentielsComponent },
-  {path: 'admin/addpromos', component: PromosComponent },
-  {path: 'admin/competence', component: CompetenceComponent },
-
-
+      {path: 'profil/addprofil', component: AddprofilComponent},
+      {path: 'profilsortie', component: ProfilsortieComponent},
+      {path: 'groupecompetence', component: GroupecompetenceComponent },
+      {path: 'groupecompetence/addgroupecompetence', component: AddgroupecompetenceComponent },
+      {path: 'referentiels', component: ReferentielsComponent },
+      {path: 'addpromos', component: PromosComponent },
+      {path: 'competence', component: CompetenceComponent },
+    ]
+  }
 ];
 
 @NgModule({

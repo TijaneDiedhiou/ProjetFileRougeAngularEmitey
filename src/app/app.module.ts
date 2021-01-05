@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -92,14 +93,14 @@ import {ErrorInterceptorProvider} from './helpers/error.interceptor';
     AddpromosComponent,
 
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        HttpClientModule,
-        ReactiveFormsModule
-        ,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
+    ,
+  ],
   providers: [ErrorInterceptorProvider],
   bootstrap: [AppComponent]
 })

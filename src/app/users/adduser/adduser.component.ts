@@ -11,7 +11,7 @@ import {UserService} from '../../services/user.service';
 })
 export class AdduserComponent implements OnInit {
   uploadForm: FormGroup;
-
+  image: any;
   constructor(private formBuilder: FormBuilder,
               private httpClient: HttpClient,
               private userService: UserService) {
@@ -32,23 +32,23 @@ export class AdduserComponent implements OnInit {
     this.initForm();
   }
 
-onFileSelect(event): any {
+  onFileSelect(event): any {
+    this.image = event.target.files[0];
     if (event.target.files.length > 0) {
       const file = event.target.files[0];
       this.uploadForm.get('avatar').setValue(file);
     }
   }
-onSubmit(): any {
+  onSubmit(): any {
     const user = new FormData();
     console.log(this.uploadForm.value.profil);
-    user.append('avatar', this.uploadForm.value.avatar);
+    user.append('avatar', this.image);
     user.append('nom', this.uploadForm.value.nom);
     user.append('prenom', this.uploadForm.value.prenom);
     user.append('email', this.uploadForm.value.email);
     user.append('password', this.uploadForm.value.password);
     user.append('profil', this.uploadForm.value.profil);
-    console.log(user);
-   // return false;
+    // return false;
     this.userService.addUser(user).subscribe(
       response => {
         console.log('ok');
@@ -59,9 +59,5 @@ onSubmit(): any {
     );
   }
 }
-
-
-
-
 
 
